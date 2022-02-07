@@ -68,17 +68,17 @@ public class Line {
 
     public int normalVectorX() {
         int normalX = vectorY;
-        if (normalX < 0 || vectorX < 0 && normalX > 0 || vectorX > 0) {
+        /*if (normalX < 0 || vectorX < 0 && normalX > 0 || vectorX > 0) {
             normalX = normalX + (normalX * (-1)) * 2;
-        }
-        return normalX;
+        }*/
+        return normalX * (-1);
     }
 
     public int normalVectorY() {
         int normalY = vectorX;
-        if (normalY < 0 && vectorY < 0 || normalY > 0 && vectorY > 0) {
+        /*if (normalY < 0 && vectorY < 0 || normalY > 0 && vectorY > 0) {
             normalY = normalY + (normalY * (-1)) * 2;
-        }
+        }*/
         return normalY;
     }
 
@@ -140,19 +140,6 @@ public class Line {
     }
 
     //v = ax0 + by0 + c / √ a2 + b2
-    /*public String distanceBetweenLines() {
-
-    Fuuuuj, Radku.
-
-        double distance = (vectorAx * 0 + vectorAy * 0 + c) / Math.sqrt(vectorAx * vectorAx + vectorAy * vectorAy);
-
-        if (distance < 0) {
-            distance *= -1;
-        }
-
-        return "v = " + distance;
-    }
-     */
 
     public int chosenX, chosenY;
 
